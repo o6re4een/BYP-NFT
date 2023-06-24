@@ -103,22 +103,22 @@ function App() {
   const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "",
-    SCAN_LINK: "",
-    NETWORK: {
-      NAME: "",
-      SYMBOL: "",
-      ID: 0,
+    "CONTRACT_ADDRESS": "0xF8209a55A4579207610a9ECd080BF3B8899d0e69",
+    "SCAN_LINK": "https://etherscan.io/address/0xf8209a55a4579207610a9ecd080bf3b8899d0e69",
+    "NETWORK": {
+      "NAME": "Etherium",
+      "SYMBOL": "ETH",
+      "ID": 1
     },
-    NFT_NAME: "",
-    SYMBOL: "",
-    MAX_SUPPLY: 1,
-    WEI_COST: 0,
-    DISPLAY_COST: 0,
-    GAS_LIMIT: 0,
-    MARKETPLACE: "",
-    MARKETPLACE_LINK: "",
-    SHOW_BACKGROUND: false,
+    "NFT_NAME": "Wagner convoy by Yevgeny Prigozhin",
+    "SYMBOL": "BYP",
+    "MAX_SUPPLY": 5555,
+    "WEI_COST": 2000000000000000,
+    "DISPLAY_COST": 0.002,
+    "GAS_LIMIT": 285000,
+    "MARKETPLACE": "Opensea",
+    "MARKETPLACE_LINK": "",
+    "SHOW_BACKGROUND": true
   });
 
   const claimNFTs = () => {
@@ -131,7 +131,7 @@ function App() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, mintAmount)
+      .mint( mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -293,8 +293,9 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL}.
+                  1 Wagner free + 0.002 for each
+                  max 10 per wallet
+                  
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
