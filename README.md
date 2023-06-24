@@ -59,7 +59,7 @@ Note: this dapp is designed to work with the intended NFT smart contract, that o
   },
   "NFT_NAME": "The Stripes NFT",
   "SYMBOL": "TSNFT",
-  "MAX_SUPPLY": 992,
+  "MAX_SUPPLY": 1002,
   "WEI_COST": 75000000000000000,
   "DISPLAY_COST": 0.075,
   "GAS_LIMIT": 285000,
