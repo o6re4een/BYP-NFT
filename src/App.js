@@ -293,8 +293,9 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 free + 0.002 for more <br/>
-                  max 10 per wallet
+                  0.002 for each NFT <br/>
+                  max 10 per wallet <br/>
+                  if u mint via contract: 1 free or 0.002 for each
                   
                 </s.TextTitle>
                 <s.SpacerXSmall />
