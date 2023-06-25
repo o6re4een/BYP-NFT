@@ -293,7 +293,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 Wagner free + 0.002 for each
+                  1 free + 0.002 for more <br/>
                   max 10 per wallet
                   
                 </s.TextTitle>
